@@ -20,6 +20,8 @@ qd<-select(qd, -c(Time,Date))
 # is subsetted in the following way:
 qd<-subset(qd, datetime>= "2007-02-01" & datetime<= "2007-02-03")
 
+# this is for having xlabels of datetime in english and not in my language:
+Sys.setlocale(category = "LC_ALL", locale = "english")
 
 # Open png device
 png(filename = "./04data/plot4.png", width=480, height=480)
